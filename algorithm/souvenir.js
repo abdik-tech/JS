@@ -23,3 +23,19 @@ function souvenirHunting(direction) {
     //code to be executed
 
 }
+
+souvenir {
+    const name;
+    const location;
+    const phone;
+    const email;
+    const hours;
+    const scale;
+    const membAccountNo;
+    const wesbite;
+    const targetMarket;
+    const foodBeverage;
+    const tax;
+    const legalLiability;
+    const shipping;
+}
