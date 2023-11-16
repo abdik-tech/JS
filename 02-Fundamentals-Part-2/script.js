@@ -402,9 +402,34 @@
 //     }
 // }
 
-let dice = Math.trunc(Math.random() * 6) + 1;
+// let dice = Math.trunc(Math.random() * 6) + 1;
 
 
-while(dice !== 6){
-console.log(`You rolled a ${dice}`);
+// while(dice !== 6){
+// console.log(`You rolled a ${dice}`);
+// dice = Math.trunc(Math.random() * 6) + 1;
+// }
+
+// coding challenge #4
+
+const bills = new Array(22,395,176,440,37,105,10,1100,86,52);
+const tips = [];
+const totals = [];
+
+const calcTip = function(bill){
+    {
+        if(bill >= 50 && bill <= 300){
+            return bill * 0.15;
+        } else {
+            return bill * 0.2;
+        }
+    }
+}; 
+
+for(let i=0;i <= bills.length-1;i++){
+    calcTip(bills[i])  
+    tips.push(calcTip(bills[i]));
+    totals.push(calcTip(bills[i])+bills[i]);
 }
+
+console.log(bills,tips,totals);
