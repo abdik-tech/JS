@@ -415,7 +415,8 @@
 const bills = new Array(22,395,176,440,37,105,10,1100,86,52);
 const tips = [];
 const totals = [];
-
+let sum = 0;
+let average = 0;
 const calcTip = function(bill){
     {
         if(bill >= 50 && bill <= 300){
@@ -426,10 +427,19 @@ const calcTip = function(bill){
     }
 }; 
 
-for(let i=0;i <= bills.length-1;i++){
-    calcTip(bills[i])  
-    tips.push(calcTip(bills[i]));
-    totals.push(calcTip(bills[i])+bills[i]);
+for(let i=0;i < bills.length;i++){
+    const tip = calcTip(bills[i])  
+    tips.push(tip);
+    totals.push(tip+bills[i]);
 }
 
+function calcAverage(arr){
+    for (let i = 0; i < bills.length; i++){
+        sum = sum + bills[i];
+    }
+    return sum/bills.length;
+};
+
 console.log(bills,tips,totals);
+console.log(calcAverage(bills));
+console.log(calcAverage(totals));
